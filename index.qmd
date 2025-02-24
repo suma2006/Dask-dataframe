@@ -6,18 +6,21 @@ Dask dataframe is an extension of pandas which deals with the datasets that are 
 
 ## Installation and settings
 Install Dask using below command
-~~~ 
+```py
 pip install dask[complete]
-~~~
+```
+
 To install Dask using Conda
-~~~
+
+```py
 conda install -c conda-forge dask
-~~~
+```
+
 To check the version
-~~~
+```py
 import dask
 print(dask._version_)
-~~~
+```
 
 ## Key Features and Explanation
 A Parallel Computing Library for Large Datasets Dask DataFrame fully extends Pandas to skillfully manage substantially large datasets, through parallel and distributed computing. It works well for big data analytics because it scales easily. Here are its key features:
