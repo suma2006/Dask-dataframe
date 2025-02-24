@@ -1,4 +1,6 @@
 ---
+title: Dask DataFrame
+---
 # Dask DataFrame
 
 ## Introduction
