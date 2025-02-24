@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Quarto Template</title>
+<title>Dask DataFrame – Quarto Template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -112,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Quarto Template</h1>
+<h1 class="title">Dask DataFrame</h1>
 </div>
 
 
@@ -131,28 +165,35 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="dask-dataframe" class="level1">
 <h1>Dask DataFrame</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Dask dataframe is an extension of pandas which deals with the datasets that are too large to fit into memory. Partitioning these into smaller chunks allows Dask to perform scalable and efficient large-scale data processing using parallel computing.</p>
+</section>
+<section id="installation-and-settings" class="level2">
+<h2 class="anchored" data-anchor-id="installation-and-settings">Installation and settings</h2>
+<p>Install Dask using below command</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install dask[complete]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To install Dask using Conda</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>conda install <span class="op">-</span>c conda<span class="op">-</span>forge dask</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To check the version</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dask</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dask._version_)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="key-features-and-explanation" class="level2">
+<h2 class="anchored" data-anchor-id="key-features-and-explanation">Key Features and Explanation</h2>
+<p>A Parallel Computing Library for Large Datasets Dask DataFrame fully extends Pandas to skillfully manage substantially large datasets, through parallel and distributed computing. It works well for big data analytics because it scales easily. Here are its key features: ### Parallel Computing for Faster Performance Dask splits data into smaller parts, processing them in parallel across many CPU cores. It can also powerfully scale the distributed clusters in situations where workloads are substantially larger. ### Handles Datasets Larger Than RAM Dask processes each bit of data in multiple chunks, enabling it to work with many terabyte-scale datasets, whereas Pandas loads each bit into memory. ### Supports Multiple File Formats It can read and write data from CSV, Parquet, and SQL databases. It also works with AWS S3, GCP, and Azure cloud storage. ### Lazy Execution for Efficiency Dask optimizes memory use and speed by delaying all computations until the .compute()command is called. ### Task Scheduling &amp; Monitoring It offers a task scheduler that is complete and optimized, along with real-time visual dashboards made for full performance monitoring. ### Integrates with Machine Learning &amp; Big Data It works with Scikit-learn, XGBoost, CuDF (GPU acceleration), and Spark for advanced analytics.</p>
+</section>
 <section id="use-cases" class="level2">
-<h2 class="anchored" data-anchor-id="use-cases">Use Cases</h2>
+<h2 class="anchored" data-anchor-id="use-cases">Use cases</h2>
 <section id="handling-large-data" class="level3">
 <h3 class="anchored" data-anchor-id="handling-large-data">Handling large data:</h3>
-<p>If data is too large, Dask helps to break data into small parts and manage them efficiently. ####Faster data analysis: Dask can run multiple tasks at once, accelerating the data analysis process.</p>
-</section>
-<section id="machine-learning-on-large-data" class="level3">
-<h3 class="anchored" data-anchor-id="machine-learning-on-large-data">Machine learning on large data:</h3>
-<p>Dask is used to clean and preprocess big data prior to applying it to train machine learning models.</p>
-</section>
-<section id="real-time-data-processing" class="level3">
-<h3 class="anchored" data-anchor-id="real-time-data-processing">Real time data processing:</h3>
-<p>Dask ensures data processing is smooth and efficient when dealing with large databases and files.</p>
-</section>
-<section id="optimizing-data-workflows" class="level3">
-<h3 class="anchored" data-anchor-id="optimizing-data-workflows">Optimizing Data Workflows:</h3>
-<p>Dask handles live data, such as prices of stocks or sensor data, efficiently and rapidly.so that we utilize Dask.</p>
+<p>If data is too large, Dask helps to break data into small parts and manage them efficiently. ####Faster data analysis: Dask can run multiple tasks at once, accelerating the data analysis process. ### Machine learning on large data: Dask is used to clean and preprocess big data prior to applying it to train machine learning models. ### Real time data processing: Dask ensures data processing is smooth and efficient when dealing with large databases and files. ### Optimizing Data Workflows: Dask handles live data, such as prices of stocks or sensor data, efficiently and rapidly.so that we utilize Dask.</p>
 </section>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Dask DataFrame is a powerful tool for efficient handling of large datasets. It is an extension of Pandas that allows parallel and distributed computing, enabling you to process terabyte-scale data without overloading memory. It supports several file formats, integrates with big data &amp; machine learning tools, and offers real-time monitoring for optimal performance. Final Thought: When you’re dealing with large-scale data processing Dask is a scalable, efficient, and easy-to-use tool that accelerates computations while saving memory. Quarto template Text!</p>
+<p>Dask DataFrame is a powerful tool for efficient handling of large datasets. It is an extension of Pandas that allows parallel and distributed computing, enabling you to process terabyte-scale data without overloading memory. It supports several file formats, integrates with big data &amp; machine learning tools, and offers real-time monitoring for optimal performance. Final Thought: When you’re dealing with large-scale data processing Dask is a scalable, efficient, and easy-to-use tool that accelerates computations while saving memory.</p>
+<hr>
 
 
 </section>
