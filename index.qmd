@@ -11,6 +11,10 @@ Install Dask using below command
 ```py
 pip install dask[complete]
 ```
+```py
+![Dashboard
+Screenshot]("C:\Users\hp\Downloads\Screenshot (6).png")
+```
 
 To install Dask using Conda
 
@@ -22,6 +26,10 @@ To check the version
 ```py
 import dask
 print(dask._version_)
+```
+```py
+![Dashboard
+Screenshot]("C:\Users\hp\Downloads\Screenshot (12).png")
 ```
 
 ## Key Features and Explanation
@@ -53,6 +61,7 @@ It offers a task scheduler that is complete and optimized, along with real-time 
 It works with Scikit-learn, XGBoost, CuDF (GPU acceleration), and Spark for advanced analytics.
 
 # Code Examples
+
 ## Load the Data and Check Basic Info
 ```py
 import dask.dataframe as dd
@@ -65,13 +74,19 @@ print(df.dtypes)
 print(df.shape)
 #only loads the necessary parts on demand.
 ```
+
+```py
+![Dashboard
+Screenshot]("C:\Users\hp\Downloads\Screenshot (8).png")
+```
+
 ## Descriptive Statistics
+
 ```py
 desc_stats = df.describe().compute()
-# df.describe(): Computes summary statistics (like mean, standard deviation, min, etc.) for numerical columns in the dataset.
-# .compute(): Converts the lazy Dask computation into an actual Pandas DataFrame by executing it.
+#Computes summary statistics (like mean, max, min, etc.) for numeric columns and converts the lazy Dask computation into an actual Pandas DataFrame.
 print(desc_stats)
-# Displays the result.
+# prints the result.
 print("Total Revenue Sum:", df['Total Revenue'].sum().compute())
 # Computes the total sum of the "Total Revenue" column and prints the total revenue.
 print("Max Profit:", df['Total Profit'].max().compute())
@@ -79,22 +94,59 @@ print("Max Profit:", df['Total Profit'].max().compute())
 print("Mean Units Sold:", df['Units Sold'].mean().compute())
 # Computes the average (mean) number of units sold and Executes the operation and prints the final numeric value.
 ```
+
+```py
+![Dashboard
+Screenshot](""C:\Users\hp\Downloads\Screenshot (7) (2).png"")
+```
+
 ## Sorting data
 ```py
 sorted_df = df.compute().sort_values('Total Profit', ascending=False)
 # Sorts the DataFrame by "Total Profit" in descending order (highest profit first)
 print(sorted_df.head())
 # Prints the first 5 rows of the sorted DataFrame.
-
-
 ```
 
+```py
+![Dashboard
+Screenshot]("C:\Users\hp\Downloads\Screenshot (10).png")
+```
 
+## Handeling Missing data
+```py
+df_cleaned = df.dropna()
+# Compute the result (Dask is lazy, so you need to call compute to get the actual DataFrame)
+df_cleaned_computed = df_cleaned.compute()
+# Show the cleaned data
+print(df_cleaned_computed)
+```
+
+```py
+![Dashboard
+Screenshot](C:\Users\hp\Downloads\Screenshot (11).png)
+```
+
+## Aggregation and grouping
+```py
+df_grouped=df.groupby('Item Type',observed=True)['Total Profit']
+# Groups the DataFrame based on unique values 
+print('Multiple aggregations:')
+display(df_grouped.agg(['count','sum','mean','std']))
+# Applies multiple aggregations (count, sum, mean, std) on "Total Profit" and displays the results.
+```
+```py
+
+```
 ## Use cases
 
 ### Handling large data:
 
-If data is too large, Dask helps to break data into small parts and manage them efficiently. ####Faster data analysis: Dask can run multiple tasks at once, accelerating the data analysis process.
+If data is too large, Dask helps to break data into small parts and manage them efficiently.
+
+### Faster data analysis: 
+
+Dask can run multiple tasks at once, accelerating the data analysis process.
 
 ### Machine learning on large data:
 
