@@ -258,16 +258,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>df_cleaned_computed <span class="op">=</span> df_cleaned.compute()</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the cleaned data</span></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_cleaned_computed)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/suma2006/Dask-dataframe/blob/master/psdv%202.png?raw=true" class="img-fluid figure-img"></p>
+<figcaption>sce</figcaption>
+</figure>
+</div>
 </section>
 <section id="aggregation-and-grouping" class="level2">
 <h2 class="anchored" data-anchor-id="aggregation-and-grouping">Aggregation and grouping</h2>
-<div class="sourceCode" id="cb12"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df_grouped<span class="op">=</span>df.groupby(<span class="st">'Item Type'</span>,observed<span class="op">=</span><span class="va">True</span>)[<span class="st">'Total Profit'</span>]</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Groups the DataFrame based on unique values </span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Multiple aggregations:'</span>)</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>display(df_grouped.agg([<span class="st">'count'</span>,<span class="st">'sum'</span>,<span class="st">'mean'</span>,<span class="st">'std'</span>]))</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Applies multiple aggregations (count, sum, mean, std) on "Total Profit" and displays the results.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df_grouped<span class="op">=</span>df.groupby(<span class="st">'Item Type'</span>,observed<span class="op">=</span><span class="va">True</span>)[<span class="st">'Total Profit'</span>]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Groups the DataFrame based on unique values </span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Multiple aggregations:'</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>display(df_grouped.agg([<span class="st">'count'</span>,<span class="st">'sum'</span>,<span class="st">'mean'</span>,<span class="st">'std'</span>]))</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Applies multiple aggregations (count, sum, mean, std) on "Total Profit" and displays the results.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="use-cases" class="level2">
 <h2 class="anchored" data-anchor-id="use-cases">Use cases</h2>
