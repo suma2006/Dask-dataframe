@@ -92,7 +92,7 @@ sorted_df = df.compute().sort_values('Total Profit', ascending=False)
 print(sorted_df.head())
 # Prints the first 5 rows of the sorted DataFrame.
 ```
-![screenshot](
+![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/4.png?raw=true)
 
 
 
