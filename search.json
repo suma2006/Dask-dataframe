@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Dask DataFrame",
     "section": "",
-    "text": "Dask dataframe is an extension of pandas which deals with the datasets that are too large to fit into memory. Partitioning these into smaller chunks allows Dask to perform scalable and efficient large-scale data processing using parallel computing.\n\n\n\nInstall Dask using below command\npip install dask[complete]\n\n\n\nscreenshot\n\n\nTo check the version\nimport dask\nprint(dask._version_)\n\n\n\nscreenshot\n\n\n\n\n\nA Parallel Computing Library for Large Datasets Dask DataFrame fully extends Pandas to skillfully manage substantially large datasets, through parallel and distributed computing. It works well for big data analytics because it scales easily. Here are its key features:\n\n\nDask splits data into smaller parts, processing them in parallel across many CPU cores. It can also powerfully scale the distributed clusters in situations where workloads are substantially larger.\n\n\n\nDask processes each bit of data in multiple chunks, enabling it to work with many terabyte-scale datasets, whereas Pandas loads each bit into memory.\n\n\n\nIt can read and write data from CSV, Parquet, and SQL databases. It also works with AWS S3, GCP, and Azure cloud storage.\n\n\n\nDask optimizes memory use and speed by delaying all computations until the .compute() command is called. It works efficiently by operating only on well-structured, chunked, and parallelizable data, ensuring optimal resource utilization.\n\n\n\nIt offers a task scheduler that is complete and optimized, along with real-time visual dashboards made for full performance monitoring.\n\n\n\nIt works with Scikit-learn, XGBoost, CuDF (GPU acceleration), and Spark for advanced analytics."
+    "text": "Dask dataframe is an extension of pandas which deals with the datasets that are too large to fit into memory. Partitioning these into smaller chunks allows Dask to perform scalable and efficient large-scale data processing using parallel computing."
   },
   {
     "objectID": "index.html#introduction",
@@ -38,15 +38,15 @@
     "objectID": "index.html#installation-and-settings",
     "href": "index.html#installation-and-settings",
     "title": "Dask DataFrame",
-    "section": "",
-    "text": "Install Dask using below command\npip install dask[complete]\n\n\n\nscreenshot\n\n\nTo check the version\nimport dask\nprint(dask._version_)\n\n\n\nscreenshot"
+    "section": "Installation and settings",
+    "text": "Installation and settings\nInstall Dask using below command\npip install dask[complete]\n\n\n\nscreenshot\n\n\nTo check the version\nimport dask\nprint(dask._version_)\n\n\n\nscreenshot"
   },
   {
     "objectID": "index.html#key-features-and-explanation",
     "href": "index.html#key-features-and-explanation",
     "title": "Dask DataFrame",
-    "section": "",
-    "text": "A Parallel Computing Library for Large Datasets Dask DataFrame fully extends Pandas to skillfully manage substantially large datasets, through parallel and distributed computing. It works well for big data analytics because it scales easily. Here are its key features:\n\n\nDask splits data into smaller parts, processing them in parallel across many CPU cores. It can also powerfully scale the distributed clusters in situations where workloads are substantially larger.\n\n\n\nDask processes each bit of data in multiple chunks, enabling it to work with many terabyte-scale datasets, whereas Pandas loads each bit into memory.\n\n\n\nIt can read and write data from CSV, Parquet, and SQL databases. It also works with AWS S3, GCP, and Azure cloud storage.\n\n\n\nDask optimizes memory use and speed by delaying all computations until the .compute() command is called. It works efficiently by operating only on well-structured, chunked, and parallelizable data, ensuring optimal resource utilization.\n\n\n\nIt offers a task scheduler that is complete and optimized, along with real-time visual dashboards made for full performance monitoring.\n\n\n\nIt works with Scikit-learn, XGBoost, CuDF (GPU acceleration), and Spark for advanced analytics."
+    "section": "Key Features and Explanation",
+    "text": "Key Features and Explanation\nA Parallel Computing Library for Large Datasets Dask DataFrame fully extends Pandas to skillfully manage substantially large datasets, through parallel and distributed computing. It works well for big data analytics because it scales easily. Here are its key features:\n\nParallel Computing for Faster Performance\nDask splits data into smaller parts, processing them in parallel across many CPU cores. It can also powerfully scale the distributed clusters in situations where workloads are substantially larger.\n\n\nHandles Datasets Larger Than RAM\nDask processes each bit of data in multiple chunks, enabling it to work with many terabyte-scale datasets, whereas Pandas loads each bit into memory.\n\n\nSupports Multiple File Formats\nIt can read and write data from CSV, Parquet, and SQL databases. It also works with AWS S3, GCP, and Azure cloud storage.\n\n\nLazy Execution for Efficiency\nDask optimizes memory use and speed by delaying all computations until the .compute() command is called. It works efficiently by operating only on well-structured, chunked, and parallelizable data, ensuring optimal resource utilization.\n\n\nTask Scheduling & Monitoring\nIt offers a task scheduler that is complete and optimized, along with real-time visual dashboards made for full performance monitoring.\n\n\nIntegrates with Machine Learning & Big Data\nIt works with Scikit-learn, XGBoost, CuDF (GPU acceleration), and Spark for advanced analytics."
   },
   {
     "objectID": "index.html#load-the-data-and-check-basic-info",
