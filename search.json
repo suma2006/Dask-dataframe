@@ -74,7 +74,7 @@
     "href": "index.html#handeling-missing-data",
     "title": "Dask DataFrame",
     "section": "Handeling Missing data",
-    "text": "Handeling Missing data\ndf_cleaned = df.dropna()\n# Compute the result (Dask is lazy, so you need to call compute to get the actual DataFrame)\ndf_cleaned_computed = df_cleaned.compute()\n# Show the cleaned data\nprint(df_cleaned_computed)\n\n\n\nsce"
+    "text": "Handeling Missing data\ndf_cleaned = df.dropna()\n# Compute the result (Dask is lazy, so you need to call compute to get the actual DataFrame)\ndf_cleaned_computed = df_cleaned.compute()\n# Show the cleaned data\nprint(df_cleaned_computed)\n\n\n\nscreenshot"
   },
   {
     "objectID": "index.html#aggregation-and-grouping",
