@@ -39,7 +39,7 @@ It can read and write data from CSV, Parquet, and SQL databases. It also works w
 
 ### Lazy Execution for Efficiency
 
-Dask optimizes memory use and speed by delaying all computations until the .compute()command is called.
+Dask optimizes memory use and speed by delaying all computations until the .compute() command is called. It works efficiently by operating only on well-structured, chunked, and parallelizable data, ensuring optimal resource utilization.
 
 ### Task Scheduling & Monitoring
 
@@ -113,7 +113,7 @@ print(df_cleaned_computed)
 df_grouped=df.groupby('Item Type',observed=True)['Total Profit']
 # Groups the DataFrame based on unique values 
 print('Multiple aggregations:')
-display(df_grouped.agg(['count','sum','mean','std']))
+display(df_grouped.agg(['count','sum','mean','std']).head(5))
 # Applies multiple aggregations (count, sum, mean, std) on "Total Profit" and displays the results.
 ```
 
