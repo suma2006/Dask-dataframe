@@ -85,13 +85,14 @@ print("Mean Units Sold:", df['Units Sold'].mean().compute())
 
 
 ## Sorting data
+
 ```py
 sorted_df = df.compute().sort_values('Total Profit', ascending=False)
 # Sorts the DataFrame by "Total Profit" in descending order (highest profit first)
 print(sorted_df.head())
 # Prints the first 5 rows of the sorted DataFrame.
 ```
-
+![screenshot](
 
 
 
