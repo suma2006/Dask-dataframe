@@ -99,10 +99,7 @@ sorted_df = df.compute().sort_values('Total Profit', ascending=False)
 print(sorted_df.head())
 # Prints the first 5 rows of the sorted DataFrame.
 ```
-
-```py
-
-```
+![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/psdv%202.png?raw=true)
 
 ## Handeling Missing data
 ```py
