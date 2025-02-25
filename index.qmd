@@ -1,7 +1,6 @@
 ---
 title: Dask DataFrame
 ---
-# Dask DataFrame
 
 ## Introduction
 Dask dataframe is an extension of pandas which deals with the datasets that are too large to fit into memory. Partitioning these into smaller chunks allows Dask to perform scalable and efficient large-scale data processing using parallel computing.
