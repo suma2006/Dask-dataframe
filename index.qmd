@@ -19,7 +19,7 @@ To check the version
 import dask
 print(dask._version_)
 ```
-![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/psdv%202.png?raw=true)
+
 
 ## Key Features and Explanation
 
@@ -64,7 +64,7 @@ print(df.shape)
 #only loads the necessary parts on demand.
 ```
 
-![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/psdv%202.png?raw=true)
+
 
 ## Descriptive Statistics
 
@@ -80,7 +80,9 @@ print("Max Profit:", df['Total Profit'].max().compute())
 print("Mean Units Sold:", df['Units Sold'].mean().compute())
 # Computes the average (mean) number of units sold and Executes the operation and prints the final numeric value.
 ```
-![screenshot](
+
+
+
 
 ## Sorting data
 ```py
@@ -89,7 +91,9 @@ sorted_df = df.compute().sort_values('Total Profit', ascending=False)
 print(sorted_df.head())
 # Prints the first 5 rows of the sorted DataFrame.
 ```
-![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/psdv%202.png?raw=true)
+
+
+
 
 ## Handeling Missing data
 ```py
@@ -99,7 +103,9 @@ df_cleaned_computed = df_cleaned.compute()
 # Show the cleaned data
 print(df_cleaned_computed)
 ```
-![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/psdv%202.png?raw=true)
+
+
+
 
 ## Aggregation and grouping
 ```py
@@ -109,9 +115,10 @@ print('Multiple aggregations:')
 display(df_grouped.agg(['count','sum','mean','std']))
 # Applies multiple aggregations (count, sum, mean, std) on "Total Profit" and displays the results.
 ```
-```py
 
-```
+
+
+
 ## Use cases
 
 ### Handling large data:
