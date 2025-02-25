@@ -67,7 +67,7 @@
     "href": "index.html#sorting-data",
     "title": "Dask DataFrame",
     "section": "Sorting data",
-    "text": "Sorting data\nsorted_df = df.compute().sort_values('Total Profit', ascending=False)\n# Sorts the DataFrame by \"Total Profit\" in descending order (highest profit first)\nprint(sorted_df.head())\n# Prints the first 5 rows of the sorted DataFrame."
+    "text": "Sorting data\nsorted_df = df.compute().sort_values('Total Profit', ascending=False)\n# Sorts the DataFrame by \"Total Profit\" in descending order (highest profit first)\nprint(sorted_df.head())\n# Prints the first 5 rows of the sorted DataFrame.\n![screenshot]("
   },
   {
     "objectID": "index.html#handeling-missing-data",
