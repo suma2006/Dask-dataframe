@@ -70,9 +70,7 @@ print(df.shape)
 #only loads the necessary parts on demand.
 ```
 
-```py
-
-```
+![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/psdv%202.png?raw=true)
 
 ## Descriptive Statistics
 
