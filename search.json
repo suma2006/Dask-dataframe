@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Quarto Blog",
     "section": "",
-    "text": "Simple Visualisation\n\n\n\n\n\n\nML\n\n\n\n\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n\n\n\nWelcome Post\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome\n\n\n\n\n\nWelcome Post\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\n\n\n\n\n\n\nSimple Visualisation\n\n\n\n\n\n\nML\n\n\n\n\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome.html",
@@ -12,13 +12,6 @@
     "title": "Welcome",
     "section": "",
     "text": "Welcome\nHello world, this is my first blog post.\nI can write in markdown\nprint(\"Hello World\")\nI can also write math equations:\n\\[\ny = x^2\n\\]\nI can create lists easily:\n\nOne\nTwo\n\nI can also create numbered lists:\n\nOne\nTwo\n\nOr, create a table:\n\n\n\nName\nAge\n\n\n\n\nAlice\n20\n\n\nBob\n21"
-  },
-  {
-    "objectID": "posts/visualisation.html",
-    "href": "posts/visualisation.html",
-    "title": "Simple Visualisation",
-    "section": "",
-    "text": "import numpy as np\nimport matplotlib.pyplot as plt\n%matplotlib inline\n%config InlineBackend.figure_format = 'retina'\n\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nplt.plot(x, y)"
   },
   {
     "objectID": "index.html",
@@ -84,6 +77,13 @@
     "text": "Aggregation and grouping\ndf_grouped=df.groupby('Item Type',observed=True)['Total Profit']\n# Groups the DataFrame based on unique values \nprint('Multiple aggregations:')\ndisplay(df_grouped.agg(['count','sum','mean','std']).head(5))\n# Applies multiple aggregations (count, sum, mean, std) on \"Total Profit\" and displays the results.\n\n\n\nscreenshot"
   },
   {
+    "objectID": "index.html#dask-task-graph-visualization-for-grouped-mean-calculation",
+    "href": "index.html#dask-task-graph-visualization-for-grouped-mean-calculation",
+    "title": "Dask DataFrame",
+    "section": "Dask Task Graph Visualization for Grouped Mean Calculation",
+    "text": "Dask Task Graph Visualization for Grouped Mean Calculation\n![screenshot]( The image shows a Dask task graph, which represents the step-by-step execution of computing the mean of “Total Profit” grouped by “Region.” Each box represents an operation, and arrows indicate the data flow. This visualization helps understand how Dask optimizes computations by breaking them into smaller tasks, executing them in parallel for efficiency."
+  },
+  {
     "objectID": "index.html#use-cases",
     "href": "index.html#use-cases",
     "title": "Dask DataFrame",
@@ -103,5 +103,12 @@
     "title": "Dask DataFrame",
     "section": "References",
     "text": "References\nDask official Documentation - https://docs.dask.org/en/stable/index.html Dask Tutorials"
+  },
+  {
+    "objectID": "posts/visualisation.html",
+    "href": "posts/visualisation.html",
+    "title": "Simple Visualisation",
+    "section": "",
+    "text": "import numpy as np\nimport matplotlib.pyplot as plt\n%matplotlib inline\n%config InlineBackend.figure_format = 'retina'\n\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nplt.plot(x, y)"
   }
 ]
