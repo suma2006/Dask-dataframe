@@ -206,7 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="lazy-execution-for-efficiency" class="level3">
 <h3 class="anchored" data-anchor-id="lazy-execution-for-efficiency">Lazy Execution for Efficiency</h3>
-<p>Dask optimizes memory use and speed by delaying all computations until the .compute()command is called.</p>
+<p>Dask optimizes memory use and speed by delaying all computations until the .compute() command is called. It works efficiently by operating only on well-structured, chunked, and parallelizable data, ensuring optimal resource utilization.</p>
 </section>
 <section id="task-scheduling-monitoring" class="level3">
 <h3 class="anchored" data-anchor-id="task-scheduling-monitoring">Task Scheduling &amp; Monitoring</h3>
@@ -289,7 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb7"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df_grouped<span class="op">=</span>df.groupby(<span class="st">'Item Type'</span>,observed<span class="op">=</span><span class="va">True</span>)[<span class="st">'Total Profit'</span>]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Groups the DataFrame based on unique values </span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Multiple aggregations:'</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>display(df_grouped.agg([<span class="st">'count'</span>,<span class="st">'sum'</span>,<span class="st">'mean'</span>,<span class="st">'std'</span>]))</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>display(df_grouped.agg([<span class="st">'count'</span>,<span class="st">'sum'</span>,<span class="st">'mean'</span>,<span class="st">'std'</span>]).head(<span class="dv">5</span>))</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Applies multiple aggregations (count, sum, mean, std) on "Total Profit" and displays the results.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="use-cases" class="level2">
