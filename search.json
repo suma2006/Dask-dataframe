@@ -60,21 +60,21 @@
     "href": "index.html#descriptive-statistics",
     "title": "Dask DataFrame",
     "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\ndesc_stats = df.describe().compute()\nprint(desc_stats)\n\nprint(\"Total Revenue Sum:\", df['Total Revenue'].sum().compute())\nprint(\"Max Profit:\", df['Total Profit'].max().compute())\nprint(\"Mean Units Sold:\", df['Units Sold'].mean().compute())"
+    "text": "Descriptive Statistics\ndesc_stats = df.describe().compute()\n# df.describe(): Computes summary statistics (like mean, standard deviation, min, etc.) for numerical columns in the dataset.\n# .compute(): Converts the lazy Dask computation into an actual Pandas DataFrame by executing it.\nprint(desc_stats)\n# Displays the result.\nprint(\"Total Revenue Sum:\", df['Total Revenue'].sum().compute())\n# Computes the total sum of the \"Total Revenue\" column and prints the total revenue.\nprint(\"Max Profit:\", df['Total Profit'].max().compute())\n# Finds the maximum value in the \"Total Profit\" column, Executes and retrieves the highest profit value.\nprint(\"Mean Units Sold:\", df['Units Sold'].mean().compute())\n# Computes the average (mean) number of units sold and Executes the operation and prints the final numeric value."
   },
   {
     "objectID": "index.html#sorting-data",
     "href": "index.html#sorting-data",
     "title": "Dask DataFrame",
     "section": "Sorting data",
-    "text": "Sorting data\nsorted_df = df.compute().sort_values('Total Profit', ascending=False)\nprint(sorted_df.head())"
+    "text": "Sorting data\nsorted_df = df.compute().sort_values('Total Profit', ascending=False)\n# Sorts the DataFrame by \"Total Profit\" in descending order (highest profit first)\nprint(sorted_df.head())\n# Prints the first 5 rows of the sorted DataFrame."
   },
   {
     "objectID": "index.html#use-cases",
     "href": "index.html#use-cases",
     "title": "Dask DataFrame",
     "section": "Use cases",
-    "text": "Use cases\n\nHandling large data:\nIf data is too large, Dask helps to break data into small parts and manage them efficiently. ####Faster data analysis: Dask can run multiple tasks at once, accelerating the data analysis process. ### Machine learning on large data: Dask is used to clean and preprocess big data prior to applying it to train machine learning models. ### Real time data processing: Dask ensures data processing is smooth and efficient when dealing with large databases and files. ### Optimizing Data Workflows: Dask handles live data, such as prices of stocks or sensor data, efficiently and rapidly.so that we utilize Dask."
+    "text": "Use cases\n\nHandling large data:\nIf data is too large, Dask helps to break data into small parts and manage them efficiently. ####Faster data analysis: Dask can run multiple tasks at once, accelerating the data analysis process.\n\n\nMachine learning on large data:\nDask is used to clean and preprocess big data prior to applying it to train machine learning models.\n\n\nReal time data processing:\nDask ensures data processing is smooth and efficient when dealing with large databases and files.\n\n\nOptimizing Data Workflows:\nDask handles live data, such as prices of stocks or sensor data, efficiently and rapidly.so that we utilize Dask."
   },
   {
     "objectID": "index.html#conclusion",

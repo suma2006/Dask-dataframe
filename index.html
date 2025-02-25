@@ -225,22 +225,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="descriptive-statistics" class="level2">
 <h2 class="anchored" data-anchor-id="descriptive-statistics">Descriptive Statistics</h2>
 <div class="sourceCode" id="cb5"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>desc_stats <span class="op">=</span> df.describe().compute()</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(desc_stats)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Revenue Sum:"</span>, df[<span class="st">'Total Revenue'</span>].<span class="bu">sum</span>().compute())</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Max Profit:"</span>, df[<span class="st">'Total Profit'</span>].<span class="bu">max</span>().compute())</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean Units Sold:"</span>, df[<span class="st">'Units Sold'</span>].mean().compute())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># df.describe(): Computes summary statistics (like mean, standard deviation, min, etc.) for numerical columns in the dataset.</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># .compute(): Converts the lazy Dask computation into an actual Pandas DataFrame by executing it.</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(desc_stats)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Displays the result.</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Revenue Sum:"</span>, df[<span class="st">'Total Revenue'</span>].<span class="bu">sum</span>().compute())</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Computes the total sum of the "Total Revenue" column and prints the total revenue.</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Max Profit:"</span>, df[<span class="st">'Total Profit'</span>].<span class="bu">max</span>().compute())</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Finds the maximum value in the "Total Profit" column, Executes and retrieves the highest profit value.</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean Units Sold:"</span>, df[<span class="st">'Units Sold'</span>].mean().compute())</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Computes the average (mean) number of units sold and Executes the operation and prints the final numeric value.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="sorting-data" class="level2">
 <h2 class="anchored" data-anchor-id="sorting-data">Sorting data</h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sorted_df <span class="op">=</span> df.compute().sort_values(<span class="st">'Total Profit'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sorted_df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Sorts the DataFrame by "Total Profit" in descending order (highest profit first)</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sorted_df.head())</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Prints the first 5 rows of the sorted DataFrame.</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="use-cases" class="level2">
 <h2 class="anchored" data-anchor-id="use-cases">Use cases</h2>
 <section id="handling-large-data" class="level3">
 <h3 class="anchored" data-anchor-id="handling-large-data">Handling large data:</h3>
-<p>If data is too large, Dask helps to break data into small parts and manage them efficiently. ####Faster data analysis: Dask can run multiple tasks at once, accelerating the data analysis process. ### Machine learning on large data: Dask is used to clean and preprocess big data prior to applying it to train machine learning models. ### Real time data processing: Dask ensures data processing is smooth and efficient when dealing with large databases and files. ### Optimizing Data Workflows: Dask handles live data, such as prices of stocks or sensor data, efficiently and rapidly.so that we utilize Dask.</p>
+<p>If data is too large, Dask helps to break data into small parts and manage them efficiently. ####Faster data analysis: Dask can run multiple tasks at once, accelerating the data analysis process.</p>
+</section>
+<section id="machine-learning-on-large-data" class="level3">
+<h3 class="anchored" data-anchor-id="machine-learning-on-large-data">Machine learning on large data:</h3>
+<p>Dask is used to clean and preprocess big data prior to applying it to train machine learning models.</p>
+</section>
+<section id="real-time-data-processing" class="level3">
+<h3 class="anchored" data-anchor-id="real-time-data-processing">Real time data processing:</h3>
+<p>Dask ensures data processing is smooth and efficient when dealing with large databases and files.</p>
+</section>
+<section id="optimizing-data-workflows" class="level3">
+<h3 class="anchored" data-anchor-id="optimizing-data-workflows">Optimizing Data Workflows:</h3>
+<p>Dask handles live data, such as prices of stocks or sensor data, efficiently and rapidly.so that we utilize Dask.</p>
 </section>
 </section>
 <section id="conclusion" class="level2">
