@@ -68,30 +68,48 @@ print(df.shape)
 ## Descriptive Statistics
 ```py
 desc_stats = df.describe().compute()
+# df.describe(): Computes summary statistics (like mean, standard deviation, min, etc.) for numerical columns in the dataset.
+# .compute(): Converts the lazy Dask computation into an actual Pandas DataFrame by executing it.
 print(desc_stats)
-
+# Displays the result.
 print("Total Revenue Sum:", df['Total Revenue'].sum().compute())
+# Computes the total sum of the "Total Revenue" column and prints the total revenue.
 print("Max Profit:", df['Total Profit'].max().compute())
+# Finds the maximum value in the "Total Profit" column, Executes and retrieves the highest profit value.
 print("Mean Units Sold:", df['Units Sold'].mean().compute())
+# Computes the average (mean) number of units sold and Executes the operation and prints the final numeric value.
 ```
 ## Sorting data
 ```py
 sorted_df = df.compute().sort_values('Total Profit', ascending=False)
+# Sorts the DataFrame by "Total Profit" in descending order (highest profit first)
 print(sorted_df.head())
+# Prints the first 5 rows of the sorted DataFrame.
+
+
 ```
 
 
 ## Use cases
+
 ### Handling large data:
+
 If data is too large, Dask helps to break data into small parts and manage them efficiently. ####Faster data analysis: Dask can run multiple tasks at once, accelerating the data analysis process.
+
 ### Machine learning on large data:
+
 Dask is used to clean and preprocess big data prior to applying it to train machine learning models.
+
 ### Real time data processing:
+
 Dask ensures data processing is smooth and efficient when dealing with large databases and files.
+
 ### Optimizing Data Workflows:
+
 Dask handles live data, such as prices of stocks or sensor data, efficiently and rapidly.so that we utilize Dask.
 
 ## Conclusion
+
 Dask DataFrame is a powerful tool for efficient handling of large datasets. It is an extension of Pandas that allows parallel and distributed computing, enabling you to process terabyte-scale data without overloading memory. It supports several file formats, integrates with big data & machine learning tools, and offers real-time monitoring for optimal performance. Final Thought: When you're dealing with large-scale data processing Dask is a scalable, efficient, and easy-to-use tool that accelerates computations while saving memory.
 ---
 
