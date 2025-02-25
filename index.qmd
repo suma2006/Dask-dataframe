@@ -12,7 +12,7 @@ Install Dask using below command
 pip install dask[complete]
 ```
 
-![output](https://github.com/suma2006/Dask-dataframe/blob/master/1.png?raw=true)
+![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/1.png?raw=true)
 
 To install Dask using Conda
 
@@ -25,9 +25,7 @@ To check the version
 import dask
 print(dask._version_)
 ```
-```py
 
-```
 
 ## Key Features and Explanation
 
