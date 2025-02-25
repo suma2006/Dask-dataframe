@@ -88,7 +88,7 @@
     "href": "index.html#use-cases",
     "title": "Dask DataFrame",
     "section": "Use cases",
-    "text": "Use cases\n\nHandling large data:\nIf data is too large, Dask helps to break data into small parts and manage them efficiently.\n\n\nFaster data analysis:\nDask can run multiple tasks at once, accelerating the data analysis process.\n\n\nMachine learning on large data:\nDask is used to clean and preprocess big data prior to applying it to train machine learning models.\n\n\nReal time data processing:\nDask DataFrame can efficiently handle real-time data processing, making it ideal for use cases like streaming analytics, financial data analysis, and monitoring sensor data.\n\n\nOptimizing Data Workflows:\nDask handles live data, such as prices of stocks or sensor data, efficiently and rapidly.so that we utilize Dask.\n![screenshot]("
+    "text": "Use cases\n\nHandling large data:\nIf data is too large, Dask helps to break data into small parts and manage them efficiently.\n\n\nFaster data analysis:\nDask can run multiple tasks at once, accelerating the data analysis process.\n\n\nMachine learning on large data:\nDask is used to clean and preprocess big data prior to applying it to train machine learning models.\n\n\nReal time data processing:\nDask DataFrame can efficiently handle real-time data processing, making it ideal for use cases like streaming analytics, financial data analysis, and monitoring sensor data.\n\n\nOptimizing Data Workflows:\nDask handles live data, such as prices of stocks or sensor data, efficiently and rapidly.so that we utilize Dask."
   },
   {
     "objectID": "index.html#conclusion",
