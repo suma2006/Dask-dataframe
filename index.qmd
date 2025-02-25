@@ -112,10 +112,7 @@ df_cleaned_computed = df_cleaned.compute()
 # Show the cleaned data
 print(df_cleaned_computed)
 ```
-
-```py
-
-```
+![sce](https://github.com/suma2006/Dask-dataframe/blob/master/psdv%202.png?raw=true)
 
 ## Aggregation and grouping
 ```py
