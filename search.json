@@ -53,7 +53,7 @@
     "href": "index.html#load-the-data-and-check-basic-info",
     "title": "Dask DataFrame",
     "section": "Load the Data and Check Basic Info",
-    "text": "Load the Data and Check Basic Info\nimport dask.dataframe as dd\n# this imports the Dask DataFrame module\nfile_path = '1000000_Sales_Records.csv' \ndf = dd.read_csv(file_path)\n# dd.read_csv(file_path) reads the CSV file lazily\nprint(df.dtypes) \n# loads the entire dataset into memory immediately.\nprint(df.shape)\n#only loads the necessary parts on demand."
+    "text": "Load the Data and Check Basic Info\nimport dask.dataframe as dd\n# this imports the Dask DataFrame module\nfile_path = '1000000_Sales_Records.csv' \ndf = dd.read_csv(file_path)\n# dd.read_csv(file_path) reads the CSV file lazily\nprint(df.dtypes) \n# loads the entire dataset into memory immediately.\nprint(df.shape)\n#only loads the necessary parts on demand.\n\n\n\nscreenshot"
   },
   {
     "objectID": "index.html#descriptive-statistics",
