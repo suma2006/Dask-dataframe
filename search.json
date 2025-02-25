@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Quarto Blog",
     "section": "",
-    "text": "Simple Visualisation\n\n\n\n\n\n\nML\n\n\n\n\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n\n\n\nWelcome Post\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome\n\n\n\n\n\nWelcome Post\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\n\n\n\n\n\n\nSimple Visualisation\n\n\n\n\n\n\nML\n\n\n\n\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome.html",
@@ -12,13 +12,6 @@
     "title": "Welcome",
     "section": "",
     "text": "Welcome\nHello world, this is my first blog post.\nI can write in markdown\nprint(\"Hello World\")\nI can also write math equations:\n\\[\ny = x^2\n\\]\nI can create lists easily:\n\nOne\nTwo\n\nI can also create numbered lists:\n\nOne\nTwo\n\nOr, create a table:\n\n\n\nName\nAge\n\n\n\n\nAlice\n20\n\n\nBob\n21"
-  },
-  {
-    "objectID": "posts/visualisation.html",
-    "href": "posts/visualisation.html",
-    "title": "Simple Visualisation",
-    "section": "",
-    "text": "import numpy as np\nimport matplotlib.pyplot as plt\n%matplotlib inline\n%config InlineBackend.figure_format = 'retina'\n\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nplt.plot(x, y)"
   },
   {
     "objectID": "index.html",
@@ -60,7 +53,7 @@
     "href": "index.html#descriptive-statistics",
     "title": "Dask DataFrame",
     "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\ndesc_stats = df.describe().compute()\n#Computes summary statistics (like mean, max, min, etc.) for numeric columns and converts the lazy Dask computation into an actual Pandas DataFrame.\nprint(desc_stats)\n# prints the result.\nprint(\"Total Revenue Sum:\", df['Total Revenue'].sum().compute())\n# Computes the total sum of the \"Total Revenue\" column and prints the total revenue.\nprint(\"Max Profit:\", df['Total Profit'].max().compute())\n# Finds the maximum value in the \"Total Profit\" column, Executes and retrieves the highest profit value.\nprint(\"Mean Units Sold:\", df['Units Sold'].mean().compute())\n# Computes the average (mean) number of units sold and Executes the operation and prints the final numeric value."
+    "text": "Descriptive Statistics\ndesc_stats = df.describe().compute()\n#Computes summary statistics (like mean, max, min, etc.) for numeric columns and converts the lazy Dask computation into an actual Pandas DataFrame.\nprint(desc_stats)\n# prints the result.\nprint(\"Total Revenue Sum:\", df['Total Revenue'].sum().compute())\n# Computes the total sum of the \"Total Revenue\" column and prints the total revenue.\nprint(\"Max Profit:\", df['Total Profit'].max().compute())\n# Finds the maximum value in the \"Total Profit\" column, Executes and retrieves the highest profit value.\nprint(\"Mean Units Sold:\", df['Units Sold'].mean().compute())\n# Computes the average (mean) number of units sold and Executes the operation and prints the final numeric value.\n\n\n\nscreenshot"
   },
   {
     "objectID": "index.html#sorting-data",
@@ -103,5 +96,12 @@
     "title": "Dask DataFrame",
     "section": "References",
     "text": "References\nDask official Documentation - https://docs.dask.org/en/stable/index.html Dask Tutorials"
+  },
+  {
+    "objectID": "posts/visualisation.html",
+    "href": "posts/visualisation.html",
+    "title": "Simple Visualisation",
+    "section": "",
+    "text": "import numpy as np\nimport matplotlib.pyplot as plt\n%matplotlib inline\n%config InlineBackend.figure_format = 'retina'\n\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nplt.plot(x, y)"
   }
 ]
