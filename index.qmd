@@ -52,6 +52,35 @@ It offers a task scheduler that is complete and optimized, along with real-time 
 
 It works with Scikit-learn, XGBoost, CuDF (GPU acceleration), and Spark for advanced analytics.
 
+# Code Examples
+## Load the Data and Check Basic Info
+```py
+import dask.dataframe as dd
+# this imports the Dask DataFrame module
+file_path = '1000000_Sales_Records.csv' 
+df = dd.read_csv(file_path)
+# dd.read_csv(file_path) reads the CSV file lazily
+print(df.dtypes) 
+# loads the entire dataset into memory immediately.
+print(df.shape)
+#only loads the necessary parts on demand.
+```
+## Descriptive Statistics
+```py
+desc_stats = df.describe().compute()
+print(desc_stats)
+
+print("Total Revenue Sum:", df['Total Revenue'].sum().compute())
+print("Max Profit:", df['Total Profit'].max().compute())
+print("Mean Units Sold:", df['Units Sold'].mean().compute())
+```
+## Sorting data
+```py
+sorted_df = df.compute().sort_values('Total Profit', ascending=False)
+print(sorted_df.head())
+```
+
+
 ## Use cases
 ### Handling large data:
 If data is too large, Dask helps to break data into small parts and manage them efficiently. ####Faster data analysis: Dask can run multiple tasks at once, accelerating the data analysis process.
