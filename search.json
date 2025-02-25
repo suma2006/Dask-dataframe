@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Quarto Blog",
     "section": "",
-    "text": "Simple Visualisation\n\n\n\n\n\n\nML\n\n\n\n\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n\n\n\nWelcome Post\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome\n\n\n\n\n\nWelcome Post\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\n\n\n\n\n\n\nSimple Visualisation\n\n\n\n\n\n\nML\n\n\n\n\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome.html",
@@ -14,18 +14,11 @@
     "text": "Welcome\nHello world, this is my first blog post.\nI can write in markdown\nprint(\"Hello World\")\nI can also write math equations:\n\\[\ny = x^2\n\\]\nI can create lists easily:\n\nOne\nTwo\n\nI can also create numbered lists:\n\nOne\nTwo\n\nOr, create a table:\n\n\n\nName\nAge\n\n\n\n\nAlice\n20\n\n\nBob\n21"
   },
   {
-    "objectID": "posts/visualisation.html",
-    "href": "posts/visualisation.html",
-    "title": "Simple Visualisation",
-    "section": "",
-    "text": "import numpy as np\nimport matplotlib.pyplot as plt\n%matplotlib inline\n%config InlineBackend.figure_format = 'retina'\n\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nplt.plot(x, y)"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Dask DataFrame",
     "section": "",
-    "text": "Dask dataframe is an extension of pandas which deals with the datasets that are too large to fit into memory. Partitioning these into smaller chunks allows Dask to perform scalable and efficient large-scale data processing using parallel computing.\n\n\n\nInstall Dask using below command\npip install dask[complete]\n\nTo install Dask using Conda\nconda install -c conda-forge dask\nTo check the version\nimport dask\nprint(dask._version_)\n\n\n\n\nA Parallel Computing Library for Large Datasets Dask DataFrame fully extends Pandas to skillfully manage substantially large datasets, through parallel and distributed computing. It works well for big data analytics because it scales easily. Here are its key features:\n\n\nDask splits data into smaller parts, processing them in parallel across many CPU cores. It can also powerfully scale the distributed clusters in situations where workloads are substantially larger.\n\n\n\nDask processes each bit of data in multiple chunks, enabling it to work with many terabyte-scale datasets, whereas Pandas loads each bit into memory.\n\n\n\nIt can read and write data from CSV, Parquet, and SQL databases. It also works with AWS S3, GCP, and Azure cloud storage.\n\n\n\nDask optimizes memory use and speed by delaying all computations until the .compute()command is called.\n\n\n\nIt offers a task scheduler that is complete and optimized, along with real-time visual dashboards made for full performance monitoring.\n\n\n\nIt works with Scikit-learn, XGBoost, CuDF (GPU acceleration), and Spark for advanced analytics."
+    "text": "Dask dataframe is an extension of pandas which deals with the datasets that are too large to fit into memory. Partitioning these into smaller chunks allows Dask to perform scalable and efficient large-scale data processing using parallel computing.\n\n\n\nInstall Dask using below command\npip install dask[complete]\nTo install Dask using Conda\nconda install -c conda-forge dask\nTo check the version\nimport dask\nprint(dask._version_)\n\n\n\n\nA Parallel Computing Library for Large Datasets Dask DataFrame fully extends Pandas to skillfully manage substantially large datasets, through parallel and distributed computing. It works well for big data analytics because it scales easily. Here are its key features:\n\n\nDask splits data into smaller parts, processing them in parallel across many CPU cores. It can also powerfully scale the distributed clusters in situations where workloads are substantially larger.\n\n\n\nDask processes each bit of data in multiple chunks, enabling it to work with many terabyte-scale datasets, whereas Pandas loads each bit into memory.\n\n\n\nIt can read and write data from CSV, Parquet, and SQL databases. It also works with AWS S3, GCP, and Azure cloud storage.\n\n\n\nDask optimizes memory use and speed by delaying all computations until the .compute()command is called.\n\n\n\nIt offers a task scheduler that is complete and optimized, along with real-time visual dashboards made for full performance monitoring.\n\n\n\nIt works with Scikit-learn, XGBoost, CuDF (GPU acceleration), and Spark for advanced analytics."
   },
   {
     "objectID": "index.html#introduction",
@@ -39,7 +32,7 @@
     "href": "index.html#installation-and-settings",
     "title": "Dask DataFrame",
     "section": "",
-    "text": "Install Dask using below command\npip install dask[complete]\n\nTo install Dask using Conda\nconda install -c conda-forge dask\nTo check the version\nimport dask\nprint(dask._version_)"
+    "text": "Install Dask using below command\npip install dask[complete]\nTo install Dask using Conda\nconda install -c conda-forge dask\nTo check the version\nimport dask\nprint(dask._version_)"
   },
   {
     "objectID": "index.html#key-features-and-explanation",
@@ -103,5 +96,12 @@
     "title": "Dask DataFrame",
     "section": "References",
     "text": "References\nDask official Documentation - https://docs.dask.org/en/stable/index.html Dask Tutorials"
+  },
+  {
+    "objectID": "posts/visualisation.html",
+    "href": "posts/visualisation.html",
+    "title": "Simple Visualisation",
+    "section": "",
+    "text": "import numpy as np\nimport matplotlib.pyplot as plt\n%matplotlib inline\n%config InlineBackend.figure_format = 'retina'\n\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nplt.plot(x, y)"
   }
 ]
