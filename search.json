@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Dask DataFrame",
     "section": "",
-    "text": "Dask dataframe is an extension of pandas which deals with the datasets that are too large to fit into memory. Partitioning these into smaller chunks allows Dask to perform scalable and efficient large-scale data processing using parallel computing.\n\n\n\nInstall Dask using below command\npip install dask[complete]\n![Dashboard\nScreenshot](\"C:\\Users\\hp\\Downloads\\Screenshot (6).png\")\nTo install Dask using Conda\nconda install -c conda-forge dask\nTo check the version\nimport dask\nprint(dask._version_)\n![Dashboard\nScreenshot](\"C:\\Users\\hp\\Downloads\\Screenshot (12).png\")\n\n\n\nA Parallel Computing Library for Large Datasets Dask DataFrame fully extends Pandas to skillfully manage substantially large datasets, through parallel and distributed computing. It works well for big data analytics because it scales easily. Here are its key features:\n\n\nDask splits data into smaller parts, processing them in parallel across many CPU cores. It can also powerfully scale the distributed clusters in situations where workloads are substantially larger.\n\n\n\nDask processes each bit of data in multiple chunks, enabling it to work with many terabyte-scale datasets, whereas Pandas loads each bit into memory.\n\n\n\nIt can read and write data from CSV, Parquet, and SQL databases. It also works with AWS S3, GCP, and Azure cloud storage.\n\n\n\nDask optimizes memory use and speed by delaying all computations until the .compute()command is called.\n\n\n\nIt offers a task scheduler that is complete and optimized, along with real-time visual dashboards made for full performance monitoring.\n\n\n\nIt works with Scikit-learn, XGBoost, CuDF (GPU acceleration), and Spark for advanced analytics."
+    "text": "Dask dataframe is an extension of pandas which deals with the datasets that are too large to fit into memory. Partitioning these into smaller chunks allows Dask to perform scalable and efficient large-scale data processing using parallel computing.\n\n\n\nInstall Dask using below command\npip install dask[complete]\n\nTo install Dask using Conda\nconda install -c conda-forge dask\nTo check the version\nimport dask\nprint(dask._version_)\n\n\n\n\nA Parallel Computing Library for Large Datasets Dask DataFrame fully extends Pandas to skillfully manage substantially large datasets, through parallel and distributed computing. It works well for big data analytics because it scales easily. Here are its key features:\n\n\nDask splits data into smaller parts, processing them in parallel across many CPU cores. It can also powerfully scale the distributed clusters in situations where workloads are substantially larger.\n\n\n\nDask processes each bit of data in multiple chunks, enabling it to work with many terabyte-scale datasets, whereas Pandas loads each bit into memory.\n\n\n\nIt can read and write data from CSV, Parquet, and SQL databases. It also works with AWS S3, GCP, and Azure cloud storage.\n\n\n\nDask optimizes memory use and speed by delaying all computations until the .compute()command is called.\n\n\n\nIt offers a task scheduler that is complete and optimized, along with real-time visual dashboards made for full performance monitoring.\n\n\n\nIt works with Scikit-learn, XGBoost, CuDF (GPU acceleration), and Spark for advanced analytics."
   },
   {
     "objectID": "index.html#introduction",
@@ -39,7 +39,7 @@
     "href": "index.html#installation-and-settings",
     "title": "Dask DataFrame",
     "section": "",
-    "text": "Install Dask using below command\npip install dask[complete]\n![Dashboard\nScreenshot](\"C:\\Users\\hp\\Downloads\\Screenshot (6).png\")\nTo install Dask using Conda\nconda install -c conda-forge dask\nTo check the version\nimport dask\nprint(dask._version_)\n![Dashboard\nScreenshot](\"C:\\Users\\hp\\Downloads\\Screenshot (12).png\")"
+    "text": "Install Dask using below command\npip install dask[complete]\n\nTo install Dask using Conda\nconda install -c conda-forge dask\nTo check the version\nimport dask\nprint(dask._version_)"
   },
   {
     "objectID": "index.html#key-features-and-explanation",
@@ -53,28 +53,28 @@
     "href": "index.html#load-the-data-and-check-basic-info",
     "title": "Dask DataFrame",
     "section": "Load the Data and Check Basic Info",
-    "text": "Load the Data and Check Basic Info\nimport dask.dataframe as dd\n# this imports the Dask DataFrame module\nfile_path = '1000000_Sales_Records.csv' \ndf = dd.read_csv(file_path)\n# dd.read_csv(file_path) reads the CSV file lazily\nprint(df.dtypes) \n# loads the entire dataset into memory immediately.\nprint(df.shape)\n#only loads the necessary parts on demand.\n![Dashboard\nScreenshot](\"C:\\Users\\hp\\Downloads\\Screenshot (8).png\")"
+    "text": "Load the Data and Check Basic Info\nimport dask.dataframe as dd\n# this imports the Dask DataFrame module\nfile_path = '1000000_Sales_Records.csv' \ndf = dd.read_csv(file_path)\n# dd.read_csv(file_path) reads the CSV file lazily\nprint(df.dtypes) \n# loads the entire dataset into memory immediately.\nprint(df.shape)\n#only loads the necessary parts on demand."
   },
   {
     "objectID": "index.html#descriptive-statistics",
     "href": "index.html#descriptive-statistics",
     "title": "Dask DataFrame",
     "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\ndesc_stats = df.describe().compute()\n#Computes summary statistics (like mean, max, min, etc.) for numeric columns and converts the lazy Dask computation into an actual Pandas DataFrame.\nprint(desc_stats)\n# prints the result.\nprint(\"Total Revenue Sum:\", df['Total Revenue'].sum().compute())\n# Computes the total sum of the \"Total Revenue\" column and prints the total revenue.\nprint(\"Max Profit:\", df['Total Profit'].max().compute())\n# Finds the maximum value in the \"Total Profit\" column, Executes and retrieves the highest profit value.\nprint(\"Mean Units Sold:\", df['Units Sold'].mean().compute())\n# Computes the average (mean) number of units sold and Executes the operation and prints the final numeric value.\n![Dashboard\nScreenshot](\"\"C:\\Users\\hp\\Downloads\\Screenshot (7) (2).png\"\")"
+    "text": "Descriptive Statistics\ndesc_stats = df.describe().compute()\n#Computes summary statistics (like mean, max, min, etc.) for numeric columns and converts the lazy Dask computation into an actual Pandas DataFrame.\nprint(desc_stats)\n# prints the result.\nprint(\"Total Revenue Sum:\", df['Total Revenue'].sum().compute())\n# Computes the total sum of the \"Total Revenue\" column and prints the total revenue.\nprint(\"Max Profit:\", df['Total Profit'].max().compute())\n# Finds the maximum value in the \"Total Profit\" column, Executes and retrieves the highest profit value.\nprint(\"Mean Units Sold:\", df['Units Sold'].mean().compute())\n# Computes the average (mean) number of units sold and Executes the operation and prints the final numeric value."
   },
   {
     "objectID": "index.html#sorting-data",
     "href": "index.html#sorting-data",
     "title": "Dask DataFrame",
     "section": "Sorting data",
-    "text": "Sorting data\nsorted_df = df.compute().sort_values('Total Profit', ascending=False)\n# Sorts the DataFrame by \"Total Profit\" in descending order (highest profit first)\nprint(sorted_df.head())\n# Prints the first 5 rows of the sorted DataFrame.\n![Dashboard\nScreenshot](\"C:\\Users\\hp\\Downloads\\Screenshot (10).png\")"
+    "text": "Sorting data\nsorted_df = df.compute().sort_values('Total Profit', ascending=False)\n# Sorts the DataFrame by \"Total Profit\" in descending order (highest profit first)\nprint(sorted_df.head())\n# Prints the first 5 rows of the sorted DataFrame."
   },
   {
     "objectID": "index.html#handeling-missing-data",
     "href": "index.html#handeling-missing-data",
     "title": "Dask DataFrame",
     "section": "Handeling Missing data",
-    "text": "Handeling Missing data\ndf_cleaned = df.dropna()\n# Compute the result (Dask is lazy, so you need to call compute to get the actual DataFrame)\ndf_cleaned_computed = df_cleaned.compute()\n# Show the cleaned data\nprint(df_cleaned_computed)\n![Dashboard\nScreenshot](C:\\Users\\hp\\Downloads\\Screenshot (11).png)"
+    "text": "Handeling Missing data\ndf_cleaned = df.dropna()\n# Compute the result (Dask is lazy, so you need to call compute to get the actual DataFrame)\ndf_cleaned_computed = df_cleaned.compute()\n# Show the cleaned data\nprint(df_cleaned_computed)"
   },
   {
     "objectID": "index.html#aggregation-and-grouping",
@@ -96,5 +96,12 @@
     "title": "Dask DataFrame",
     "section": "Conclusion",
     "text": "Conclusion\nDask DataFrame is a powerful tool for efficient handling of large datasets. It is an extension of Pandas that allows parallel and distributed computing, enabling you to process terabyte-scale data without overloading memory. It supports several file formats, integrates with big data & machine learning tools, and offers real-time monitoring for optimal performance. Final Thought: When you’re dealing with large-scale data processing Dask is a scalable, efficient, and easy-to-use tool that accelerates computations while saving memory."
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Dask DataFrame",
+    "section": "References",
+    "text": "References\nDask official Documentation - https://docs.dask.org/en/stable/index.html Dask Tutorials"
   }
 ]
