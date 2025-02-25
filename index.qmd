@@ -19,7 +19,7 @@ To check the version
 import dask
 print(dask._version_)
 ```
-
+![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/6.png?raw=true)
 
 ## Key Features and Explanation
 
