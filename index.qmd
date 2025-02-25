@@ -86,10 +86,7 @@ print("Max Profit:", df['Total Profit'].max().compute())
 print("Mean Units Sold:", df['Units Sold'].mean().compute())
 # Computes the average (mean) number of units sold and Executes the operation and prints the final numeric value.
 ```
-
-```py
-
-```
+![screenshot](
 
 ## Sorting data
 ```py
