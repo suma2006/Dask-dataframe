@@ -104,7 +104,7 @@ df_cleaned_computed = df_cleaned.compute()
 # Show the cleaned data
 print(df_cleaned_computed)
 ```
-
+![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/5.png?raw=true)
 
 
 
