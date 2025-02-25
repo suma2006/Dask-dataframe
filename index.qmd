@@ -11,9 +11,7 @@ Install Dask using below command
 ```py
 pip install dask[complete]
 ```
-```py
 
-```
 
 To install Dask using Conda
 
