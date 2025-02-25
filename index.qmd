@@ -119,6 +119,8 @@ display(df_grouped.agg(['count','sum','mean','std']).head(5))
 
 
 
+
+
 ## Use cases
 
 ### Handling large data:
@@ -141,7 +143,7 @@ Dask DataFrame can efficiently handle real-time data processing, making it ideal
 
 Dask handles live data, such as prices of stocks or sensor data, efficiently and rapidly.so that we utilize Dask.
 
-![screenshot](
+
 
 ## Conclusion
 
