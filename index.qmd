@@ -116,7 +116,7 @@ print('Multiple aggregations:')
 display(df_grouped.agg(['count','sum','mean','std']).head(5))
 # Applies multiple aggregations (count, sum, mean, std) on "Total Profit" and displays the results.
 ```
-
+![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/10.jpg?raw=true)
 
 
 
