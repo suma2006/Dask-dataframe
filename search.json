@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Quarto Blog",
     "section": "",
-    "text": "Welcome\n\n\n\n\n\nWelcome Post\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\n\n\n\n\n\n\nSimple Visualisation\n\n\n\n\n\n\nML\n\n\n\n\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\nNo matching items"
+    "text": "Simple Visualisation\n\n\n\n\n\n\nML\n\n\n\n\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n\n\n\nWelcome Post\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome.html",
@@ -12,6 +12,13 @@
     "title": "Welcome",
     "section": "",
     "text": "Welcome\nHello world, this is my first blog post.\nI can write in markdown\nprint(\"Hello World\")\nI can also write math equations:\n\\[\ny = x^2\n\\]\nI can create lists easily:\n\nOne\nTwo\n\nI can also create numbered lists:\n\nOne\nTwo\n\nOr, create a table:\n\n\n\nName\nAge\n\n\n\n\nAlice\n20\n\n\nBob\n21"
+  },
+  {
+    "objectID": "posts/visualisation.html",
+    "href": "posts/visualisation.html",
+    "title": "Simple Visualisation",
+    "section": "",
+    "text": "import numpy as np\nimport matplotlib.pyplot as plt\n%matplotlib inline\n%config InlineBackend.figure_format = 'retina'\n\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nplt.plot(x, y)"
   },
   {
     "objectID": "index.html",
@@ -81,7 +88,7 @@
     "href": "index.html#use-cases",
     "title": "Dask DataFrame",
     "section": "Use cases",
-    "text": "Use cases\n\nHandling large data:\nIf data is too large, Dask helps to break data into small parts and manage them efficiently.\n\n\nFaster data analysis:\nDask can run multiple tasks at once, accelerating the data analysis process.\n\n\nMachine learning on large data:\nDask is used to clean and preprocess big data prior to applying it to train machine learning models.\n\n\nReal time data processing:\nDask ensures data processing is smooth and efficient when dealing with large databases and files.\n\n\nOptimizing Data Workflows:\nDask handles live data, such as prices of stocks or sensor data, efficiently and rapidly.so that we utilize Dask."
+    "text": "Use cases\n\nHandling large data:\nIf data is too large, Dask helps to break data into small parts and manage them efficiently.\n\n\nFaster data analysis:\nDask can run multiple tasks at once, accelerating the data analysis process.\n\n\nMachine learning on large data:\nDask is used to clean and preprocess big data prior to applying it to train machine learning models.\n\n\nReal time data processing:\nDask DataFrame can efficiently handle real-time data processing, making it ideal for use cases like streaming analytics, financial data analysis, and monitoring sensor data.\n\n\nOptimizing Data Workflows:\nDask handles live data, such as prices of stocks or sensor data, efficiently and rapidly.so that we utilize Dask."
   },
   {
     "objectID": "index.html#conclusion",
@@ -96,12 +103,5 @@
     "title": "Dask DataFrame",
     "section": "References",
     "text": "References\nDask official Documentation - https://docs.dask.org/en/stable/index.html Dask Tutorials"
-  },
-  {
-    "objectID": "posts/visualisation.html",
-    "href": "posts/visualisation.html",
-    "title": "Simple Visualisation",
-    "section": "",
-    "text": "import numpy as np\nimport matplotlib.pyplot as plt\n%matplotlib inline\n%config InlineBackend.figure_format = 'retina'\n\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nplt.plot(x, y)"
   }
 ]
