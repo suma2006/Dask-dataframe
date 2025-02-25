@@ -53,7 +53,7 @@
     "href": "index.html#descriptive-statistics",
     "title": "Dask DataFrame",
     "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\ndesc_stats = df.describe().compute()\n#Computes summary statistics (like mean, max, min, etc.) for numeric columns and converts the lazy Dask computation into an actual Pandas DataFrame.\nprint(desc_stats)\n# prints the result.\nprint(\"Total Revenue Sum:\", df['Total Revenue'].sum().compute())\n# Computes the total sum of the \"Total Revenue\" column and prints the total revenue.\nprint(\"Max Profit:\", df['Total Profit'].max().compute())\n# Finds the maximum value in the \"Total Profit\" column, Executes and retrieves the highest profit value.\nprint(\"Mean Units Sold:\", df['Units Sold'].mean().compute())\n# Computes the average (mean) number of units sold and Executes the operation and prints the final numeric value."
+    "text": "Descriptive Statistics\ndesc_stats = df.describe().compute()\n#Computes summary statistics (like mean, max, min, etc.) for numeric columns and converts the lazy Dask computation into an actual Pandas DataFrame.\nprint(desc_stats)\n# prints the result.\nprint(\"Total Revenue Sum:\", df['Total Revenue'].sum().compute())\n# Computes the total sum of the \"Total Revenue\" column and prints the total revenue.\nprint(\"Max Profit:\", df['Total Profit'].max().compute())\n# Finds the maximum value in the \"Total Profit\" column, Executes and retrieves the highest profit value.\nprint(\"Mean Units Sold:\", df['Units Sold'].mean().compute())\n# Computes the average (mean) number of units sold and Executes the operation and prints the final numeric value.\n![screenshot]("
   },
   {
     "objectID": "index.html#sorting-data",
