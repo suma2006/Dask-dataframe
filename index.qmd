@@ -12,8 +12,7 @@ Install Dask using below command
 pip install dask[complete]
 ```
 ```py
-![Dashboard
-Screenshot]("C:\Users\hp\Downloads\Screenshot (6).png")
+
 ```
 
 To install Dask using Conda
@@ -28,8 +27,7 @@ import dask
 print(dask._version_)
 ```
 ```py
-![Dashboard
-Screenshot]("C:\Users\hp\Downloads\Screenshot (12).png")
+
 ```
 
 ## Key Features and Explanation
@@ -76,8 +74,7 @@ print(df.shape)
 ```
 
 ```py
-![Dashboard
-Screenshot]("C:\Users\hp\Downloads\Screenshot (8).png")
+
 ```
 
 ## Descriptive Statistics
@@ -96,8 +93,7 @@ print("Mean Units Sold:", df['Units Sold'].mean().compute())
 ```
 
 ```py
-![Dashboard
-Screenshot](""C:\Users\hp\Downloads\Screenshot (7) (2).png"")
+
 ```
 
 ## Sorting data
@@ -109,8 +105,7 @@ print(sorted_df.head())
 ```
 
 ```py
-![Dashboard
-Screenshot]("C:\Users\hp\Downloads\Screenshot (10).png")
+
 ```
 
 ## Handeling Missing data
@@ -123,8 +118,7 @@ print(df_cleaned_computed)
 ```
 
 ```py
-![Dashboard
-Screenshot](C:\Users\hp\Downloads\Screenshot (11).png)
+
 ```
 
 ## Aggregation and grouping
@@ -163,5 +157,10 @@ Dask handles live data, such as prices of stocks or sensor data, efficiently and
 ## Conclusion
 
 Dask DataFrame is a powerful tool for efficient handling of large datasets. It is an extension of Pandas that allows parallel and distributed computing, enabling you to process terabyte-scale data without overloading memory. It supports several file formats, integrates with big data & machine learning tools, and offers real-time monitoring for optimal performance. Final Thought: When you're dealing with large-scale data processing Dask is a scalable, efficient, and easy-to-use tool that accelerates computations while saving memory.
+
+## References
+
+Dask official Documentation - https://docs.dask.org/en/stable/index.html
+Dask Tutorials 
 ---
 
