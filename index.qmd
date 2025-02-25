@@ -14,12 +14,6 @@ pip install dask[complete]
 
 ![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/1.png?raw=true)
 
-To install Dask using Conda
-
-```py
-conda install -c conda-forge dask
-```
-
 To check the version
 ```py
 import dask
