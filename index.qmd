@@ -118,7 +118,10 @@ display(df_grouped.agg(['count','sum','mean','std']).head(5))
 ![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/10.jpg?raw=true)
 
 
+## Dask Task Graph Visualization for Grouped Mean Calculation
 
+![screenshot](
+The image shows a Dask task graph, which represents the step-by-step execution of computing the mean of "Total Profit" grouped by "Region." Each box represents an operation, and arrows indicate the data flow. This visualization helps understand how Dask optimizes computations by breaking them into smaller tasks, executing them in parallel for efficiency.
 
 
 ## Use cases
