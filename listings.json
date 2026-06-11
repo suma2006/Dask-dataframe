@@ -2,8 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/visualisation.html",
-      "/posts/welcome.html"
+      "/posts/dask-dataframe/index.html"
     ]
   }
 ]

@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://suma2006.github.io/Dask-dataframe/posts/dask-dataframe/index.html</loc>
+    <lastmod>2026-06-11T07:41:05.223Z</lastmod>
+  </url>
+  <url>
     <loc>https://suma2006.github.io/Dask-dataframe/blog.html</loc>
-    <lastmod>2025-02-25T15:35:37.537Z</lastmod>
-  </url>
-  <url>
-    <loc>https://suma2006.github.io/Dask-dataframe/posts/welcome.html</loc>
-    <lastmod>2025-02-25T15:35:37.538Z</lastmod>
-  </url>
-  <url>
-    <loc>https://suma2006.github.io/Dask-dataframe/posts/visualisation.html</loc>
-    <lastmod>2025-02-25T15:35:37.538Z</lastmod>
+    <lastmod>2026-06-11T07:41:05.218Z</lastmod>
   </url>
   <url>
     <loc>https://suma2006.github.io/Dask-dataframe/index.html</loc>
-    <lastmod>2025-02-25T15:35:37.537Z</lastmod>
+    <lastmod>2026-06-11T07:41:05.218Z</lastmod>
   </url>
 </urlset>
