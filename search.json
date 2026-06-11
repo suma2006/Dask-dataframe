@@ -1,72 +1,58 @@
 [
   {
-    "objectID": "posts/dask-dataframe/index.html",
-    "href": "posts/dask-dataframe/index.html",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Dask DataFrame: Scalable Data Processing in Python",
     "section": "",
     "text": "When working with datasets that exceed available memory, the standard Pandas workflow breaks down. Dask DataFrame addresses this limitation by partitioning large datasets into smaller, manageable chunks and processing them in parallel. It mirrors the Pandas API, so the learning curve is minimal for anyone already comfortable with Pandas.\nThis post walks through the installation process, highlights the key features of Dask DataFrame, and demonstrates its capabilities with practical code examples using a million-row sales dataset."
   },
   {
-    "objectID": "posts/dask-dataframe/index.html#introduction",
-    "href": "posts/dask-dataframe/index.html#introduction",
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
     "title": "Dask DataFrame: Scalable Data Processing in Python",
     "section": "",
     "text": "When working with datasets that exceed available memory, the standard Pandas workflow breaks down. Dask DataFrame addresses this limitation by partitioning large datasets into smaller, manageable chunks and processing them in parallel. It mirrors the Pandas API, so the learning curve is minimal for anyone already comfortable with Pandas.\nThis post walks through the installation process, highlights the key features of Dask DataFrame, and demonstrates its capabilities with practical code examples using a million-row sales dataset."
   },
   {
-    "objectID": "posts/dask-dataframe/index.html#installation",
-    "href": "posts/dask-dataframe/index.html#installation",
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
     "title": "Dask DataFrame: Scalable Data Processing in Python",
     "section": "Installation",
     "text": "Installation\nInstall Dask with all optional dependencies using the following command:\npip install dask[complete]\n\n\n\nDask installation output\n\n\nTo verify the installed version:\nimport dask\nprint(dask.__version__)\n\n\n\nDask version check"
   },
   {
-    "objectID": "posts/dask-dataframe/index.html#key-features",
-    "href": "posts/dask-dataframe/index.html#key-features",
+    "objectID": "index.html#key-features",
+    "href": "index.html#key-features",
     "title": "Dask DataFrame: Scalable Data Processing in Python",
     "section": "Key Features",
     "text": "Key Features\n\nParallel Computing\nDask splits data into smaller partitions and processes them in parallel across multiple CPU cores. For workloads that exceed a single machine’s capacity, it can also scale out to distributed clusters.\n\n\nOut-of-Core Processing\nUnlike Pandas, which loads entire datasets into memory at once, Dask processes data in chunks. This enables it to handle terabyte-scale datasets on machines with limited RAM.\n\n\nMultiple File Format Support\nDask can read and write data in several formats including CSV, Parquet, and SQL databases. It also integrates with cloud storage providers such as AWS S3, Google Cloud Storage, and Azure Blob Storage.\n\n\nLazy Evaluation\nDask delays all computations until explicitly triggered by calling .compute(). This allows it to build an optimized task graph before executing, which reduces redundant work and minimizes memory usage.\n\n\nTask Scheduling and Monitoring\nDask includes a sophisticated task scheduler along with a real-time dashboard for monitoring computation progress, resource utilization, and performance bottlenecks.\n\n\nIntegration with ML and Big Data Tools\nDask works alongside popular tools like Scikit-learn, XGBoost, CuDF (for GPU acceleration), and Apache Spark, making it suitable for advanced analytics pipelines."
   },
   {
-    "objectID": "posts/dask-dataframe/index.html#code-examples",
-    "href": "posts/dask-dataframe/index.html#code-examples",
+    "objectID": "index.html#code-examples",
+    "href": "index.html#code-examples",
     "title": "Dask DataFrame: Scalable Data Processing in Python",
     "section": "Code Examples",
     "text": "Code Examples\nThe examples below use a CSV file containing one million sales records.\n\nLoading Data and Inspecting Structure\nimport dask.dataframe as dd\n\nfile_path = '1000000_Sales_Records.csv'\ndf = dd.read_csv(file_path)\n\n# Display column data types (no computation needed)\nprint(df.dtypes)\n\n# Display shape (triggers a lazy computation for row count)\nprint(df.shape)\n\n\n\nData loading output\n\n\nNote that dd.read_csv() does not load the entire file into memory immediately. It reads just enough to infer the schema and defers the actual data loading until a computation is requested.\n\n\nDescriptive Statistics\n# Compute summary statistics across all numeric columns\ndesc_stats = df.describe().compute()\nprint(desc_stats)\n\n# Individual aggregations\nprint(\"Total Revenue Sum:\", df['Total Revenue'].sum().compute())\nprint(\"Max Profit:\", df['Total Profit'].max().compute())\nprint(\"Mean Units Sold:\", df['Units Sold'].mean().compute())\n\n\n\nDescriptive statistics output\n\n\nEach .compute() call triggers the actual calculation. Without it, Dask only records the operation in a task graph.\n\n\nSorting Data\n# Sort by Total Profit in descending order\nsorted_df = df.compute().sort_values('Total Profit', ascending=False)\nprint(sorted_df.head())\n\n\n\nSorting output\n\n\n\n\nHandling Missing Data\n# Drop rows containing any missing values\ndf_cleaned = df.dropna()\ndf_cleaned_computed = df_cleaned.compute()\nprint(df_cleaned_computed)\n\n\n\nMissing data handling output\n\n\n\n\nAggregation and Grouping\n# Group by 'Item Type' and aggregate Total Profit\ndf_grouped = df.groupby('Item Type', observed=True)['Total Profit']\n\nprint('Multiple aggregations:')\ndisplay(df_grouped.agg(['count', 'sum', 'mean', 'std']).head(5))\n\n\n\nAggregation output"
   },
   {
-    "objectID": "posts/dask-dataframe/index.html#practical-use-cases",
-    "href": "posts/dask-dataframe/index.html#practical-use-cases",
+    "objectID": "index.html#practical-use-cases",
+    "href": "index.html#practical-use-cases",
     "title": "Dask DataFrame: Scalable Data Processing in Python",
     "section": "Practical Use Cases",
     "text": "Practical Use Cases\nLarge-scale data analysis: When datasets are too large to fit in memory, Dask partitions and processes them without requiring specialized hardware.\nAccelerating exploratory analysis: By running operations in parallel across CPU cores, Dask significantly reduces the time spent on data exploration and profiling.\nData preprocessing for machine learning: Dask can handle the cleaning, transformation, and feature engineering steps on datasets that are too large for Pandas, before feeding the results into training frameworks like Scikit-learn or XGBoost.\nStreaming and real-time workloads: Dask can process continuously arriving data, such as financial market feeds or IoT sensor streams, with low latency."
   },
   {
-    "objectID": "posts/dask-dataframe/index.html#conclusion",
-    "href": "posts/dask-dataframe/index.html#conclusion",
+    "objectID": "index.html#conclusion",
+    "href": "index.html#conclusion",
     "title": "Dask DataFrame: Scalable Data Processing in Python",
     "section": "Conclusion",
     "text": "Conclusion\nDask DataFrame is a practical tool for scaling Pandas-style data analysis beyond the limits of a single machine’s memory. It preserves a familiar API while adding parallel execution, lazy evaluation, and cluster support. For projects that involve large datasets, whether in data science, machine learning pipelines, or production analytics, Dask provides a straightforward path from prototype to scale."
   },
   {
-    "objectID": "posts/dask-dataframe/index.html#references",
-    "href": "posts/dask-dataframe/index.html#references",
+    "objectID": "index.html#references",
+    "href": "index.html#references",
     "title": "Dask DataFrame: Scalable Data Processing in Python",
     "section": "References",
     "text": "References\n\nDask Official Documentation\nDask DataFrame API Reference\nDask Tutorials (Project Pythia)\nDask GitHub Repository"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog Posts",
-    "section": "",
-    "text": "Dask DataFrame: Scalable Data Processing in Python\n\n\n\nPython\n\nBig Data\n\nDask\n\n\n\nA practical guide to Dask DataFrame, covering installation, key features, and hands-on code examples for large-scale data processing.\n\n\n\n\n\nFeb 24, 2025\n\n\nSumanjali\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Dask DataFrame: A Practical Guide",
-    "section": "",
-    "text": "Welcome to this blog on Dask DataFrame, a Python library for scalable, parallel data processing.\nDask extends the familiar Pandas API to handle datasets that are too large to fit in memory, using lazy evaluation and parallel execution across multiple cores or distributed clusters.\n\nWhat You Will Find Here\n\nAn overview of Dask DataFrame and its key features\nHands-on code examples using a million-row sales dataset\nPractical use cases for data analysis, preprocessing, and real-time processing\n\nHead over to the Blog to read the full post.\n\n\nAbout\nThis blog was built as part of an academic assignment on scalable data processing with Python. It uses Quarto for rendering and is hosted on GitHub Pages."
   }
 ]
