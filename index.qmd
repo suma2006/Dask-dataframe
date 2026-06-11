@@ -1,161 +1,19 @@
 ---
-title: Dask DataFrame
+title: "Dask DataFrame: A Practical Guide"
 ---
 
-## Introduction
-Dask dataframe is an extension of pandas which deals with the datasets that are too large to fit into memory. Partitioning these into smaller chunks allows Dask to perform scalable and efficient large-scale data processing using parallel computing.
+Welcome to this blog on **Dask DataFrame**, a Python library for scalable, parallel data processing.
 
-## Installation and settings
-Install Dask using below command
-```py
-pip install dask[complete]
-```
+Dask extends the familiar Pandas API to handle datasets that are too large to fit in memory, using lazy evaluation and parallel execution across multiple cores or distributed clusters.
 
-![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/1.png?raw=true)
+### What You Will Find Here
 
-To check the version
-```py
-import dask
-print(dask._version_)
-```
-![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/6.png?raw=true)
+- An overview of Dask DataFrame and its key features
+- Hands-on code examples using a million-row sales dataset
+- Practical use cases for data analysis, preprocessing, and real-time processing
 
-## Key Features and Explanation
+Head over to the [Blog](blog.qmd) to read the full post.
 
-A Parallel Computing Library for Large Datasets Dask DataFrame fully extends Pandas to skillfully manage substantially large datasets, through parallel and distributed computing. It works well for big data analytics because it scales easily. Here are its key features:
+### About
 
-### Parallel Computing for Faster Performance
-
-Dask splits data into smaller parts, processing them in parallel across many CPU cores. It can also powerfully scale the distributed clusters in situations where workloads are substantially larger.
-
-### Handles Datasets Larger Than RAM
-
-Dask processes each bit of data in multiple chunks, enabling it to work with many terabyte-scale datasets, whereas Pandas loads each bit into memory.
-
-### Supports Multiple File Formats
-
-It can read and write data from CSV, Parquet, and SQL databases. It also works with AWS S3, GCP, and Azure cloud storage.
-
-### Lazy Execution for Efficiency
-
-Dask optimizes memory use and speed by delaying all computations until the .compute() command is called. It works efficiently by operating only on well-structured, chunked, and parallelizable data, ensuring optimal resource utilization.
-
-### Task Scheduling & Monitoring
-
-It offers a task scheduler that is complete and optimized, along with real-time visual dashboards made for full performance monitoring.
-
-### Integrates with Machine Learning & Big Data
-
-It works with Scikit-learn, XGBoost, CuDF (GPU acceleration), and Spark for advanced analytics.
-
-# Code Examples
-
-## Load the Data and Check Basic Info
-```py
-import dask.dataframe as dd
-# this imports the Dask DataFrame module
-file_path = '1000000_Sales_Records.csv' 
-df = dd.read_csv(file_path)
-# dd.read_csv(file_path) reads the CSV file lazily
-print(df.dtypes) 
-# loads the entire dataset into memory immediately.
-print(df.shape)
-#only loads the necessary parts on demand.
-```
-![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/psdv%203.png?raw=true)
-
-
-## Descriptive Statistics
-
-```py
-desc_stats = df.describe().compute()
-#Computes summary statistics (like mean, max, min, etc.) for numeric columns and converts the lazy Dask computation into an actual Pandas DataFrame.
-print(desc_stats)
-# prints the result.
-print("Total Revenue Sum:", df['Total Revenue'].sum().compute())
-# Computes the total sum of the "Total Revenue" column and prints the total revenue.
-print("Max Profit:", df['Total Profit'].max().compute())
-# Finds the maximum value in the "Total Profit" column, Executes and retrieves the highest profit value.
-print("Mean Units Sold:", df['Units Sold'].mean().compute())
-# Computes the average (mean) number of units sold and Executes the operation and prints the final numeric value.
-```
-![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/Screenshot%20(9).png?raw=true)
-
-
-
-## Sorting data
-
-```py
-sorted_df = df.compute().sort_values('Total Profit', ascending=False)
-# Sorts the DataFrame by "Total Profit" in descending order (highest profit first)
-print(sorted_df.head())
-# Prints the first 5 rows of the sorted DataFrame.
-```
-![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/4.png?raw=true)
-
-
-
-## Handeling Missing data
-```py
-df_cleaned = df.dropna()
-# Compute the result (Dask is lazy, so you need to call compute to get the actual DataFrame)
-df_cleaned_computed = df_cleaned.compute()
-# Show the cleaned data
-print(df_cleaned_computed)
-```
-![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/5.png?raw=true)
-
-
-
-## Aggregation and grouping
-```py
-df_grouped=df.groupby('Item Type',observed=True)['Total Profit']
-# Groups the DataFrame based on unique values 
-print('Multiple aggregations:')
-display(df_grouped.agg(['count','sum','mean','std']).head(5))
-# Applies multiple aggregations (count, sum, mean, std) on "Total Profit" and displays the results.
-```
-![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/10.jpg?raw=true)
-
-
-## Dask Task Graph Visualization for Grouped Mean Calculation
-
-![screenshot](https://github.com/suma2006/Dask-dataframe/blob/master/Screenshot%20(9).png?raw=true)
-
-The image shows a Dask task graph, which represents the step-by-step execution of computing the mean of "Total Profit" grouped by "Region." Each box represents an operation, and arrows indicate the data flow. This visualization helps understand how Dask optimizes computations by breaking them into smaller tasks, executing them in parallel for efficiency.
-
-
-## Use cases
-
-### Handling large data:
-
-If data is too large, Dask helps to break data into small parts and manage them efficiently.
-
-### Faster data analysis: 
-
-Dask can run multiple tasks at once, accelerating the data analysis process.
-
-### Machine learning on large data:
-
-Dask is used to clean and preprocess big data prior to applying it to train machine learning models.
-
-### Real time data processing:
-
-Dask DataFrame can efficiently handle real-time data processing, making it ideal for use cases like streaming analytics, financial data analysis, and monitoring sensor data.
-
-### Optimizing Data Workflows:
-
-Dask handles live data, such as prices of stocks or sensor data, efficiently and rapidly.so that we utilize Dask.
-
-
-
-## Conclusion
-
-Dask DataFrame is a powerful tool for efficient handling of large datasets. It is an extension of Pandas that allows parallel and distributed computing, enabling you to process terabyte-scale data without overloading memory. It supports several file formats, integrates with big data & machine learning tools, and offers real-time monitoring for optimal performance. Final Thought: When you're dealing with large-scale data processing Dask is a scalable, efficient, and easy-to-use tool that accelerates computations while saving memory.
-
-## References
-
-Dask official Documentation - https://docs.dask.org/en/stable/index.html
-Dask Tutorials 
----
-
+This blog was built as part of an academic assignment on scalable data processing with Python. It uses [Quarto](https://quarto.org/) for rendering and is hosted on GitHub Pages.

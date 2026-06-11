@@ -3,14 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "Quarto Template"
+  title: "Dask DataFrame: A Practical Guide"
   navbar:
     right:
       - href: index.qmd
         text: Home
       - href: blog.qmd
         text: Blog
-
+  page-footer:
+    center: "Built with [Quarto](https://quarto.org/) by Sumanjali"
 
 format:
   html:
@@ -20,7 +21,6 @@ format:
     mainfont: "Roboto"
     code-copy: true
     code-overflow: wrap
-
 
 execute:
   freeze: auto

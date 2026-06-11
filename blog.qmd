@@ -1,5 +1,5 @@
 ---
-title: "Quarto Blog"
+title: "Blog Posts"
 listing:
   contents: posts
   sort: "date desc"
