@@ -1,6 +1,6 @@
 # Dask DataFrame: A Practical Guide
 
-A Quarto-based blog covering Dask DataFrame for scalable, parallel data processing in Python.
+A single-page site covering Dask DataFrame for scalable, parallel data processing in Python.
 
 ## What This Covers
 
@@ -38,18 +38,14 @@ The rendered output goes to the `docs/` directory.
 
 ```
 .
-├── _quarto.yml              # Quarto site configuration
-├── index.qmd                # Landing page
-├── blog.qmd                 # Blog listing page
-├── styles.scss              # Custom styles
-├── posts/
-│   └── dask-dataframe/
-│       ├── index.qmd        # Main blog post
-│       └── images/          # Screenshots and figures
+├── _quarto.yml       # Quarto site configuration
+├── index.qmd         # Main content (the entire site)
+├── images/           # Screenshots and figures
+├── styles.scss       # Custom styles
 ├── .github/
 │   └── workflows/
-│       └── publish.yml      # GitHub Actions deployment
-└── .nojekyll                # Disables Jekyll on GitHub Pages
+│       └── publish.yml   # GitHub Actions deployment
+└── .nojekyll         # Disables Jekyll on GitHub Pages
 ```
 
 ## Author
